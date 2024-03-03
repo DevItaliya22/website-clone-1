@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		.container {
+			display: block;
+			max-width: 1200px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 15px;
+			box-sizing: border-box;
+		}
+		.main-menu {
+			display: block;
+			clear: both;
+			margin: 35px 0;
+			background: bisque;
+		}
+		.main-menu .main-menu-inner {
+			display: block;
+			font-size: 0;
+		}
+		.main-menu .main-menu-inner li {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 14px;
+			position: relative;
+		}
+		.main-menu .main-menu-inner li a {
+			display: block;
+			font-size: 20px;
+			font-weight: 700;
+			color: #000;
+			padding: 18px 20px;
+		}
+		.main-menu .main-menu-inner li .sub-menu {
+			display: none;
+			position: absolute;
+			top: 100%;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			min-width: 140px;
+			text-align: center;
+		}
+		.main-menu .main-menu-inner li a:hover {
+			color: red;
+		}
+		.main-menu .main-menu-inner li:hover .sub-menu {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-menu">
+		<div class="container">
+			<ul class="main-menu-inner">
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">Category</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">Category 1</a>
+						</li>
+						<li>
+							<a href="#">Category 2</a>
+						</li>
+						<li>
+							<a href="#">Category 3</a>
+						</li>
+						<li>
+							<a href="#">Category 4</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Services</a>
+				</li>
+				<li>
+					<a href="#">About</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
