@@ -86,7 +86,7 @@
 .main-body .category-block {
   display: block;
   clear: both;
-  margin: 30px auto;
+  margin: 35px auto;
 }
 .main-body .category-block .category-block-inner{
   display: flex;
@@ -111,18 +111,35 @@
 
 .main-body .category-block .category-block-inner .category-items {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
-
+.category-item {
+  display: block;
+  width: 50%;
+}
 .main-body .category-block .category-block-inner .category-items.category-item{
   display: block;
+  
 }
 
 .main-body .category-block .category-block-inner .category-items.category-item img{
   display: block;
 }
-.main-body .category-block .category-block-inner .category-items.category-item p{
+.main-body .category-block .category-block-inner .category-items.category-item .content {
   display: block;
+  text-align: center;
+}
+.category-block .content {
+  color: #1e1d23;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+.category-block .content:hover{
+  color: #00a149;
 }
 
 .main-body .promotion-outer{
@@ -451,17 +468,32 @@
   transition: 0.3s ease-in-out;
 }
 
-.main-body .dishes-outer .dishes-inner .dishes-items .dishes-item .image img:hover{
-  transform: scale(1.1);
+.main-body .dishes-outer .dishes-inner .dishes-items .dishes-item .image:hover .quick-view {
+  top: 80%;
+  transition: .3s linear;
 }
 
+.main-body .dishes-outer .dishes-inner .dishes-items .dishes-item .image:not(:hover) .quick-view {
+  top: 100%;
+  transition: .3s linear;
+}
 
-.quick-view{
+.quick-view {
   display: block;
   position: absolute;
-  top: 80%;
+  top: 100%;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.24);
+  width: 100%;
+  padding: 20px 0;
 }
+
+.quick-view a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 
 .main-body .dishes-outer .dishes-inner .dishes-items .dishes-item .image .new {
   display: block;
@@ -906,6 +938,7 @@ input:focus-visible {
   clear: both;
   margin: 35px ;
 }
+
 .main-header .header-inner .header-bottom{
   display: flex;
   margin-top: 35px;
@@ -982,6 +1015,16 @@ input:focus-visible {
 }
 
 .main-header .header-bottom .header-list li .arrow-top-bottom:hover::after{
+  font-weight: 700;
+  font-family: "Font Awesome 6 Free";
+  content: " \f106";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.main-header .header-bottom .header-list li:hover .arrow-top-bottom::after{
   font-weight: 700;
   font-family: "Font Awesome 6 Free";
   content: " \f106";
